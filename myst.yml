@@ -1,0 +1,19 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 1d7c63c0-bb21-49f2-bfbd-e2f21bf9bd34
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/PCHN63112-Generalised-Linear-Mixed/extending-linear-models
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: intro.md
+    - file: 1.beyond-normal.ipynb
+    - file: 2.generalised-linear-models.ipynb
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
