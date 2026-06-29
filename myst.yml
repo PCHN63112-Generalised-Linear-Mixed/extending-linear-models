@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 1d7c63c0-bb21-49f2-bfbd-e2f21bf9bd34
-  title: Introduction to Generalised Linear Models
+  title: Extending Linear Models to Non-normal Outcomes
   # description:
   # keywords: []
   authors: Martyn McFarquhar
