@@ -8,6 +8,8 @@ project:
   authors: Martyn McFarquhar
   github: https://github.com/PCHN63112-Generalised-Linear-Mixed/extending-linear-models
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  static_files:
+    - assets/rgl
   toc:
     - file: intro.md
     - file: 1.beyond-normal.ipynb
