@@ -19,6 +19,6 @@ project:
     - file: summary
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  logo: images/logo.png
+  logo_dark: images/logo-dark.png
+  logo_url: https://canvas.manchester.ac.uk/courses/
