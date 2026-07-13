@@ -106,9 +106,9 @@ for (i in seq_along(n.norms)) {
 axes3d(edges = c("x--", "y--"), col = "black")
 grid3d(c("z"), col = "gray")
 
-# Add axis labels
-mtext3d("Estrogen",    edge = "x--", line = 3)
-mtext3d("Orientation", edge = "y--", line = 3)
+# Add axis labels (renamed to be more innocuous than the original context)
+mtext3d("Temperature",    edge = "x--", line = 3)
+mtext3d("Defective", edge = "y--", line = 3)
 
 par3d(
   userMatrix = matrix(c(1,0,0,0,0,0.34,0.94,1.3,0,-0.94,0.34,0,0,0,0,1), nrow=4, ncol=4, byrow=TRUE),

@@ -13,6 +13,7 @@ project:
   toc:
     - file: intro.md
     - file: 1.beyond-normal.ipynb
+    - file: 2.alternative-distributions.ipynb
     - file: 2.generalised-linear-models.ipynb
     - file: 3.hypothesis-tests
     - file: 4.glm-diagnostics
