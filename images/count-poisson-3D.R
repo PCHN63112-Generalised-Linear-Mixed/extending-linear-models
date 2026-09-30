@@ -139,6 +139,29 @@ points3d(
 )
 
 # -----------------------------
+# Fitted Poisson mean
+# -----------------------------
+x_pred <- seq(
+  xlim[1],
+  xlim[2],
+  length.out = 300
+)
+
+lambda_pred <- predict(
+  mod,
+  newdata = data.frame(temperature = x_pred),
+  type = "response"
+)
+
+lines3d(
+  x_pred,
+  lambda_pred,
+  rep(0, length(x_pred)),
+  col = "green3",
+  lwd = 3
+)
+
+# -----------------------------
 # Poisson probability distributions
 # -----------------------------
 for (i in seq_along(temp_vals)) {

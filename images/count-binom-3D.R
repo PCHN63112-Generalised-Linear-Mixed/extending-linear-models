@@ -20,7 +20,7 @@ mod <- glm(
 # -----------------------------
 # Settings for grouped batches
 # -----------------------------
-batch_size      <- 10   # number of items per batch
+batch_size      <- 20   # number of items per batch
 batches_per_x   <- 5    # number of replicate batches per temperature
 n_temps         <- 7    # number of temperatures to display
 
@@ -56,8 +56,8 @@ obs <- do.call(
 )
 
 # Small jitter so repeated counts are visible
-obs$temperature_jitter <- obs$temperature +
-  rep(seq(-0.02, 0.02, length.out = batches_per_x), times = n_temps)
+#obs$temperature_jitter <- obs$temperature +
+#  rep(seq(-0.02, 0.02, length.out = batches_per_x), times = n_temps)
 
 # -----------------------------
 # 3D plot
@@ -87,14 +87,14 @@ plot3d(
 # Observed batch counts (red)
 # -----------------------------
 points3d(
-  obs$temperature_jitter,
+  obs$temperature,
   obs$defective,
   rep(0, nrow(obs)),
   col = "red",
   size = 6
 )
 
-# Optional: connect the expected count 10*p(x) across temperature
+# Optional: connect the expected count 20*p(x) across temperature
 x_pred <- seq(xlim[1], xlim[2], length.out = 300)
 p_pred <- predict(
   mod,
@@ -118,7 +118,7 @@ for (i in seq_along(x_vals)) {
   x.val <- x_vals[i]
   p     <- p_vals[i]
 
-  y_vals <- 0:batch_size
+  y_vals <- 0:batch_size+2
   probs  <- dbinom(y_vals, size = batch_size, prob = p)
 
   # Scale each PMF so its tallest spike has the same visual height
@@ -150,7 +150,7 @@ grid3d(c("z"), col = "gray")
 
 # Labels
 mtext3d("Temperature", edge = "x--", line = 3)
-mtext3d("Defective Count\nWithin Batch of 10", edge = "y--", line = 3)
+mtext3d("Defective Count", edge = "y--", line = 3)
 
 
 aspect3d(1, 1.2, 0.5)
