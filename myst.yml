@@ -17,7 +17,6 @@ project:
     - file: 2.generalised-linear-models.ipynb
     - file: 3.hypothesis-tests
     - file: 4.deviance
-    - file: 4.glm-diagnostics
     - file: summary
 site:
   template: book-theme
