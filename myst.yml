@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 1d7c63c0-bb21-49f2-bfbd-e2f21bf9bd34
-  title: Extending Linear Models to Non-normal Outcomes
+  title: Extending Linear Models Beyond the Normal Distribution
   # description:
   # keywords: []
   authors: Martyn McFarquhar
@@ -11,7 +11,7 @@ project:
   static_files:
     - assets/rgl
   toc:
-    - file: intro.md
+    - file: 0.intro.ipynb
     - file: 1.beyond-normal.ipynb
     - file: 2.alternative-distributions.ipynb
     - file: 2.generalised-linear-models.ipynb
