@@ -12,3 +12,4 @@ The main ideas to take away at present are that:
 - A hypothesis testing framework can then be applied using the Wald test with asymptotic $p$-values.
 - A model comparison framework can also be applied using deviance and the likelihood ratio test, also with asymptotic $p$-values. This is known as the *Analysis of Deviance*.
 - In both cases, the asymptotic nature of the $p$-values means that the test are less trustworthy under smaller samples.
+- Finally, assumptions can be assessed in a similar fashion to the normal linear model. However, a choice exists in terms of the type of residual that is used. Furthermore, not all diagnostics will be equally relevant or useful across all GLMs and so the specific *type* of model always needs to be considered.
